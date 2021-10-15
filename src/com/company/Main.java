@@ -17,6 +17,7 @@ public class Main {
                 System.out.println("You balance: " + bankAccount.getAmount());
             } catch (LimitException e) {
                 System.out.println(e.getMessage());
+                bankAccount.withdraw((int) bankAccount.getAmount());
                 System.out.println("You may withdraw only: " + bankAccount.getAmount());
                 break;
                 }
